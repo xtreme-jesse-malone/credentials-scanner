@@ -28,6 +28,8 @@ def alpha(str)
 end
 
 ARGF.each_line do |str|
-  str = str.chomp
-  puts "\"#{str}\", #{str.length}, #{alpha(str)}, #{vowels_consonants(str)}, #{caps(str)}"
+  str = str.chomp.lstrip
+  unless str.index('\s')
+    puts "\"#{str}\", #{str.length}, #{alpha(str)}, #{vowels_consonants(str)}, #{caps(str)}"
+  end
 end

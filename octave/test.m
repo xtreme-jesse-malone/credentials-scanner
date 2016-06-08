@@ -1,6 +1,6 @@
 clear; close all; clc;
 
-[strings, a, b, c, d, y] = textread('nerds.csv', '%s %n %n %n %n %n')
+[strings, a, b, c, d, y] = textread('../testdata.csv', '%s %n %n %n %n %n')
 
 X = [a, b, c, d]
 
